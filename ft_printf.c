@@ -6,7 +6,7 @@
 /*   By: yukasaca <yukasaca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 12:03:37 by yukasaca          #+#    #+#             */
-/*   Updated: 2026/02/16 18:12:00 by yukasaca         ###   ########.fr       */
+/*   Updated: 2026/02/16 18:14:02 by yukasaca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (c);
 }
-
