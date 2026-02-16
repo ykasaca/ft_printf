@@ -6,13 +6,12 @@
 /*   By: yukasaca <yukasaca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 12:03:37 by yukasaca          #+#    #+#             */
-/*   Updated: 2026/02/16 18:14:02 by yukasaca         ###   ########.fr       */
+/*   Updated: 2026/02/16 22:00:40 by yukasaca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
-#include <stdio.h>
 #include <unistd.h>
 
 int	ft_print_c(char str)
@@ -66,15 +65,22 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
+			if (!str)
+				return (-1);
 			c += ft_checkher(str[++i], args);
+			if (c < 0)
+				return (-1);
 		}
 		else
-		{
-			write(1, &str[i], 1);
-			c++;
-		}
+			c += write(1, &str[i], 1);
 		i++;
 	}
 	va_end(args);
 	return (c);
+}
+
+
+void example(char *str,int a,...)
+{
+	print		
 }

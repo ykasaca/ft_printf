@@ -6,7 +6,7 @@
 /*   By: yukasaca <yukasaca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 12:03:42 by yukasaca          #+#    #+#             */
-/*   Updated: 2026/02/16 15:11:04 by yukasaca         ###   ########.fr       */
+/*   Updated: 2026/02/16 22:05:28 by yukasaca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	ft_print_x(unsigned long number, char c)
 	char	*basehex;
 	int		count;
 
-	count = 0;
+	count = 0; 
 	if (c == 'x')
 		basehex = "0123456789abcdef";
 	else
