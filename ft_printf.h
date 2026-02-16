@@ -6,12 +6,14 @@
 /*   By: yukasaca <yukasaca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 12:03:32 by yukasaca          #+#    #+#             */
-/*   Updated: 2026/02/16 14:02:27 by yukasaca         ###   ########.fr       */
+/*   Updated: 2026/02/16 17:10:31 by yukasaca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINFT_H
-# define FT_PRINFT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+int	ft_printf(const char *str, ...);
 
 int	ft_print_d(int n);
 int	ft_print_s(char *str);

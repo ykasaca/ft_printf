@@ -6,13 +6,12 @@
 /*   By: yukasaca <yukasaca@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 12:03:37 by yukasaca          #+#    #+#             */
-/*   Updated: 2026/02/16 15:17:18 by yukasaca         ###   ########.fr       */
+/*   Updated: 2026/02/16 20:44:13 by yukasaca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
-#include <stdio.h>
 #include <unistd.h>
 
 int	ft_print_c(char str)
@@ -32,6 +31,8 @@ static int	ft_print_o(char c)
 
 static int	ft_checkher(char str, va_list args)
 {
+	if (!str)
+		return (-1);
 	if (str == 'c')
 		return (ft_print_c(va_arg(args, int)));
 	else if (str == 'u')
@@ -67,12 +68,11 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			c += ft_checkher(str[++i], args);
+			if (c < 0)
+				return (-1);
 		}
 		else
-		{
-			write(1, &str[i], 1);
-			c++;
-		}
+			c += write(1, &str[i], 1);
 		i++;
 	}
 	va_end(args);
